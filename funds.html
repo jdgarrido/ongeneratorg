@@ -1,0 +1,147 @@
+---
+layout: bt
+---
+<div class="container">
+    <div>
+        <ol class="breadcrumb">
+          <li>
+            <a href="/">portada</a>
+          </li>
+          <li>
+            <a href="/discover.html">descúbrete</a>
+          </li>
+          <li>
+            <a href="/exist.html">existe</a>
+          </li>
+          <li class="active">
+            funciona
+          </li>
+        </ul>
+      </div>
+
+    <div class="page-header">
+        <h2>Funciona</h2>
+    </div>
+    <div id="table-spin" class="text-center">
+        <i class="fa fa-gear fa-3x fa-spin"></i> Cargando...
+    </div>
+    <div id="data"></div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//raw.githubusercontent.com/jsoma/tabletop/master/src/tabletop.js"></script>
+<script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+window.onload = function() { init() };
+var public_spreadsheet_url = '//docs.google.com/spreadsheets/d/1lKd5lpQG-H_L90sFBsatj_2xSTynVetKg2xWpP7bSrM/pubhtml';
+function init() {
+    Tabletop.init( { 
+        key: public_spreadsheet_url,
+        callback: showTableInfo,
+        simpleSheet: true 
+    } );
+}
+function drawElement() {
+    $('#datatable').DataTable({
+        "columnDefs": [
+                            {
+                                "targets": [ 0 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 3 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 6 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 7 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 8 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 9 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 10 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 11 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 12 ],
+                                "visible": false,
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 13 ],
+                                "visible": false,
+                                "searchable": true
+                            }
+                        ]
+                        
+    });
+    $('#table-spin').attr('style','display:none')
+}
+
+function showTableInfo(data) {
+    var table_el = document.createElement('table');
+    table_el.id = 'datatable';
+    table_el.classList.add('table')
+    table_el.classList.add('table-striped')
+
+    var thead_el = document.createElement('thead');
+    var tr_el = document.createElement('tr');
+    for(x=1;x<15;x++) {
+        th_el = document.createElement('th');
+        th_content = document.createTextNode('campo_'+x);
+
+        th_el.appendChild(th_content);
+        tr_el.appendChild(th_el);
+    }
+    thead_el.appendChild(tr_el);
+    table_el.appendChild(thead_el);
+
+    var tbody_el = document.createElement('tbody')
+
+    data.forEach(function(val, key){
+        var tr_el = document.createElement('tr');
+        for(var index in val) { 
+            var td_el = td_content = '';
+            if (val.hasOwnProperty(index)) {
+                var td_value = val[index];
+        
+                td_el = document.createElement('td');
+                td_content = document.createTextNode(td_value);
+        
+                td_el.appendChild(td_content);
+                tr_el.appendChild(td_el);
+            }
+        }
+        tbody_el.appendChild(tr_el)
+        table_el.appendChild(tbody_el);
+        the_data = document.getElementById('data')
+        the_data.appendChild(table_el);
+    })
+    drawElement();
+    
+}
+</script>

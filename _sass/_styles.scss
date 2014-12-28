@@ -1,0 +1,122 @@
+html, body {
+  height: 100%;
+}
+
+.descubre{
+  color: #FFF;
+  background-color: #FF5F49;
+  padding-right: 10px;
+  min-height: 250px;
+}
+.existe {
+  color: #FFF;
+  background-color: #00E157;
+  padding-right: 10px;
+  min-height: 250px;
+}
+.funciona {
+  color: #FFF;
+  background-color: #0070CA;
+  min-height: 250px;
+}
+.mainpage-header {
+  width: 100%;
+  height: 100%; 
+  background: url('/assets/images/12610079904_fb02806985_o.jpg') no-repeat fixed center center / cover transparent;
+  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  display: table;
+  color: #FFF;
+  text-align: center;
+  .mainpage-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2, p {
+    margin: 0px auto;
+  }
+  p {
+    padding: 10px 0px;
+    max-width: 400px;
+    a {
+      color: #FFF;
+
+    }
+    a:hover {
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+.mainpage-secondary {
+  width: 100%;
+  height: 100%; 
+  background: url('/assets/images/7536128238_47417949a9_o.jpg') no-repeat fixed center center / cover transparent;
+  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  display: table;
+  color: #FFF;
+  text-align: center;
+  .mainpage-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2, p {
+    margin: 0px auto;
+  }
+  p {
+    padding: 10px 0px;
+    max-width: 400px;
+  }
+}
+.mainpage-third {
+  width: 100%;
+  height: 100%; 
+  background: url('/assets/images/8605474506_b5466f42ef_o.jpg') no-repeat fixed center center / cover transparent;
+  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  display: table;
+  color: #FFF;
+  text-align: center;
+  .mainpage-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2, p {
+    margin: 0px auto;
+  }
+  p {
+    padding: 10px 0px;
+    max-width: 400px;
+  }
+}
+
+.mainpage-four {
+  width: 100%;
+  height: 100%; 
+  background: url('/assets/images/5122851068_f5937c9168_b.jpg') no-repeat fixed center center / cover transparent;
+  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  display: table;
+  color: #FFF;
+  text-align: center;
+  .mainpage-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h2, p {
+    margin: 0px auto;
+  }
+  p {
+    padding: 10px 0px;
+    max-width: 400px;
+  }
+}

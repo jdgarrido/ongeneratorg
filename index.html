@@ -1,23 +1,75 @@
 ---
-layout: default
+layout: bt
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="container mainpage-header">
+  <div class="container mainpage-cell">
+    <div>
+      <i class="fa fa-group fa-5x"></i>
+      <h2>Súmate a la acción colectiva</h2>
+      <p>
+        Promovemos la asociatividad entre los ciudadanos, para que desde la sociedad civil organizada se pueda dar impulso a los cambios que queremos.
+      </p>
+      <p>
+        <a href="#descubrete">descubrete</a> / <a href="#existe">existe</a> / <a href="#funciona">funciona</a>
+      </p>
+    </div>
+  </div>
 </div>
+
+<a name="descubrete"></a>
+<div class="container mainpage-secondary">
+  <div class="container mainpage-cell">
+    <div>
+      <i class="fa fa-rocket fa-5x"></i>
+      <h2>Descúbrete</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dicta, praesentium. Ut consectetur, explicabo, praesentium unde necessitatibus ipsa assumenda amet dolores non quo quaerat ducimus iste sunt voluptatem molestias sint.
+      </p>
+      <a href="/discover.html" class="btn btn-default">al infinito y más allá!</a>
+    </div>
+  </div>
+</div>
+
+<a name="existe"></a>
+<div class="container mainpage-third">
+  <div class="container mainpage-cell">
+    <div>
+      <i class="fa fa-leaf fa-5x"></i>
+      <h2>Existe</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dicta, praesentium. Ut consectetur, explicabo, praesentium unde necessitatibus ipsa assumenda amet dolores non quo quaerat ducimus iste sunt voluptatem molestias sint.
+      </p>
+      <a href="/exist.html" class="btn btn-default">a por ello!</a>
+    </div>
+  </div>
+</div>
+
+<a name="funciona"></a>
+<div class="container mainpage-four">
+  <div class="container mainpage-cell">
+    <div>
+      <i class="fa fa-gears fa-5x"></i>
+      <h2>Funciona</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dicta, praesentium. Ut consectetur, explicabo, praesentium unde necessitatibus ipsa assumenda amet dolores non quo quaerat ducimus iste sunt voluptatem molestias sint.
+      </p>
+      <a href="/funds.html" class="btn btn-default">encuentra tu fondo</a>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>

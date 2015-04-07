@@ -1,7 +1,7 @@
 # Site settings
 title: ONGenerat.org
 email: your-email@domain.com
-description: > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat fugit, obcaecati quis minima corporis vitae necessitatibus provident architecto consequuntur debitis recusandae ut mollitia quas nam. Provident ullam ab et.
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat fugit, obcaecati quis minima corporis vitae necessitatibus provident architecto consequuntur debitis recusandae ut mollitia quas nam. Provident ullam ab et."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
